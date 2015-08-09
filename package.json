@@ -23,6 +23,7 @@
   "homepage": "https://github.com/aleksanderson/kindle-vocab#readme",
   "dependencies": {
     "json2csv": "^2.9.0",
-    "sqlite3": "^3.0.10"
+    "sqlite3": "^3.0.10",
+    "underscore": "^1.8.3"
   }
 }
