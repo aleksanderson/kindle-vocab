@@ -1,0 +1,9 @@
+#system
+.DS_Store
+
+#editor
+.idea/
+
+#project
+node_modules/
+npm-debug.log
