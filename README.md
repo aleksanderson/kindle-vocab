@@ -1,4 +1,4 @@
-Kindle Vocab
+kindle-vocab
 ====================================
 
 ``NOTICE: Module was tested on Kindle Paper White 3 (300dpi)``
