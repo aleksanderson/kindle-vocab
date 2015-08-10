@@ -4,7 +4,7 @@
   "description": "This module helps with getting the vocabulary data from your Kindle device",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": " ./node_modules/.bin/mocha --reporter spec"
   },
   "repository": {
     "type": "git",
@@ -25,5 +25,10 @@
     "json2csv": "^2.9.0",
     "sqlite3": "^3.0.10",
     "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+    "chai": "^3.2.0",
+    "mocha": "^2.2.5",
+    "sinon": "^1.15.4"
   }
 }

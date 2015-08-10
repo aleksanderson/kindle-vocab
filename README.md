@@ -39,10 +39,5 @@ kindleVocab({csv: true}, function(result) {
 
 NOTE: default path configuration works only for MacOSX.
 
-###TODO
-
-* Provide unit tests
-* Provide promises API
-
 
 
