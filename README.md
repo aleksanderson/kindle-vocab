@@ -22,7 +22,7 @@ kindleVocab(function(result) {
 ```js
 var kindleVocab = require('kindle-vocab');
 
-kindleVocab({csv: true}, function(result) {
+kindleVocab({csv: true, duplicates: true}, function(result) {
   console.log(result);
 })
 ```

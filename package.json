@@ -1,6 +1,6 @@
 {
   "name": "kindle-vocab",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This module helps with getting the vocabulary data from your Kindle device",
   "main": "index.js",
   "scripts": {
