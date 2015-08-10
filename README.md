@@ -5,11 +5,11 @@ kindle-vocab
 
 The module reads and returns the Vocabulary Builder words from the Kindle device.
 
-###Installation
+### Installation
 
 ``npm install kindle-vocab --save``
 
-###Usage
+### Usage
 
 ```js
 var kindleVocab = require('kindle-vocab');
@@ -27,7 +27,7 @@ kindleVocab({csv: true}, function(result) {
 })
 ```
 
-###Default configuration
+### Default configuration
 
 ```
 {
