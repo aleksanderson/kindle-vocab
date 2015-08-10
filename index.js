@@ -12,15 +12,15 @@ module.exports = function(config, callback) {
 
   var db = new sqlite3.Database(config.path);
 
-  db.all("SELECT W.word, W.stem, L.usage from WORDS as W JOIN LOOKUPS AS L ON W.id = L.word_key", function(err, rows) {
+  db.all("SELECT W.word, W.stem, W.lang, L.usage from WORDS as W JOIN LOOKUPS AS L ON W.id = L.word_key", function(err, rows) {
     if(err) return callback(err);
 
-    if(config.duplicates) {
-      //TODO: spot duplicates based on 'stem' & 'usage' columns
-  }
+    if(!config.duplicates) {
+      rows = _.unique(rows, false, function(w) { return w.stem });
+    }
 
     if(config.csv) {
-      json2csv({ data: rows, fields: ['word', 'stem', 'usage'] }, function(err, csv) {
+      json2csv({ data: rows, fields: ['word', 'stem', 'lang', 'usage'] }, function(err, csv) {
         if (err) return callback(err);
           callback(null, csv);
       });
@@ -35,7 +35,7 @@ module.exports = function(config, callback) {
 function getPathToKindleVocabulary() {
   switch(process.platform) {
     case 'darwin': return '/Volumes/Kindle/system/vocabulary/vocab.db';
-    case 'linux': return ''; //TODO:
     case 'win32': return ''; //TODO:
+    case 'linux': return ''; //TODO:
   }
 }
